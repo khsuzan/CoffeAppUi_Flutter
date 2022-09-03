@@ -24,12 +24,17 @@ class CoffeType extends StatelessWidget {
       padding: const EdgeInsets.only(right: 35.0),
       child: GestureDetector(
         onTap: (() => onItemTap(itemIndex)),
-        child: Text(
-          coffeType,
-          style: GoogleFonts.poppins(
-              fontSize: 16,
-              fontWeight: FontWeight.w500,
-              color: isSelected == itemIndex ? Colors.orange : MyColor.greyed),
+        child: Column(
+          children: [
+            Text(
+              coffeType,
+              style: GoogleFonts.poppins(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w500,
+                  color:
+                      isSelected == itemIndex ? Colors.orange : MyColor.greyed),
+            ),
+          ],
         ),
       ),
     );
